@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-growl/css/growl.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-ui-growl/src/growl.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/service/alert-service.js"></script>
+    <script src="app/js/aula-sete-controller.js"></script>
+
+</head>
+<body ng-app="curso">
+
+<div class="container" ng-controller="AulaSeteController">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Cadastro Pessoas</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="itNome">Nome</label>
+                <input type="text"
+                       name="itNome"
+                       id="itNome"
+                       class="form-control"
+                       ng-model="pessoa.nome">
+            </div>
+
+            <div class="form-group">
+                <label for="itEmail">Email</label>
+                <input type="text"
+                       name="itEmail"
+                       id="itEmail"
+                       class="form-control"
+                       ng-model="pessoa.email">
+            </div>
+
+            <div class="form-group">
+                <label for="itCor">Cor</label>
+                <input type="text"
+                       name="itCor"
+                       id="itCor"
+                       class="form-control"
+                       ng-model="pessoa.cor">
+            </div>
+        </div>
+
+
+        <div class="panel-footer">
+            <button type="button" class="btn btn-primary" ng-click="salvar()">Salvar</button>
+            <button type="button" class="btn btn-warning" ng-click="limpar()">Limpar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div ui-grid="gridOptions">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
