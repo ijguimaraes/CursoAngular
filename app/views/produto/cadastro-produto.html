@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cadastro Produtos</div>
+            <div class="panel-body">
+                <md-input-container>
+                    <label>Descrição</label>
+                    <input ng-model="produto.descricao" >
+                </md-input-container>
+                <br>
+                <md-input-container>
+                    <label>Unidade</label>
+                    <input ng-model="produto.unidade" >
+                </md-input-container>
+                <br>
+                <md-input-container>
+                    <label>Cor</label>
+                    <input ng-model="produto.fabricante" >
+                </md-input-container>
+
+            </div>
+
+            <div class="panel-footer">
+                <md-button class="md-raised md-primary" ng-click="salvar()">Salvar</md-button>
+                <md-button class="md-raised" ng-click="limpar()">Limpar</md-button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>
