@@ -1,1 +1,5 @@
-angular.module('curso', ['ngMessages','ui.growl', 'ui.grid']);
+angular.module('curso', [
+    'ngMessages',
+    'ui.growl',
+    'ui.grid',
+    'ngMaterial']);
